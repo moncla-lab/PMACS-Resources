@@ -4,18 +4,18 @@ LD, 2023-05
 
 These are general notes for using the PMACS cluster at UPenn. 
 
-###Logging into cluster 
+### Logging into cluster 
 
 
  ssh PMACSUSER@consign.pmacs.upenn.edu
 
  
-###Transferring files to cluster
+### Transferring files to cluster
 
 rsync -av test PMACSUSER@mercury.pmacs.upenn.edu:~/directory_in_cluster
 
 
-###Interactive sessions
+### Interactive sessions
 
 bsub -Is bash
 
@@ -30,7 +30,7 @@ Louise BEAST example of interactive session:
    7. view currently running jobs: bjobs -u username
    8. kill a job: bkill job_id
 
-###Batch submission and submission scripts
+### Batch submission and submission scripts
 
 Place submission script and all relevant analyses files in the folder. For multiple jobs there will be multiple folders that each contain a submission file and data/analyses files. A batch subsmission script *multi_sub.sh* which is provided can be executed in the command line of the cluster to execute each of these subsmission scripts indepedently.
 
@@ -79,7 +79,7 @@ This will let you use it in a submission script by calling the location of the s
 
 
 
-###Notes:
+### Notes:
 
 ** always ensure that you are pointing to the right file location in your submission script
 
