@@ -68,15 +68,14 @@ module spider *name_of_package**
 ### Installing software
 
 
-You can request the PMACS staff to install things and they may get it up there one day. If you dont want to wait you can rysnc the executables for a program into your cluster environment and save it there.
+You can request the PMACS staff to install things and they may get it up there one day and may not even install it properly if they do. If you dont want to wait you can rysnc the executables for a program into your cluster environment and save it there.
+
 For example if i have the executable file for IQTREE you can uploud it to a folder called bin:
 
-rsync -av IQTREE.sh username@mercury.pmacs.upenn.edu:~/bin
+rsync -av iqtree username@mercury.pmacs.upenn.edu:~/bin
 
 This will let you use it in a submission script by calling the location of the script (see submission script example above)
-
-
-
+In this case the iqtree executable can be downloaded here: http://www.iqtree.org/#download (choose the 64-bit Linux version)
 
 
 ### Notes:
