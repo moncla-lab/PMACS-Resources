@@ -78,6 +78,15 @@ This will let you use it in a submission script by calling the location of the s
 In this case the iqtree executable can be downloaded here: http://www.iqtree.org/#download (choose the 64-bit Linux version)
 
 
+### Monitoring Jobs
+
+When running jobs that have outputs to console, because LSF clusters dont write outfiles in realtime you need to use the *bpeek* commmand:
+
+bpeek <jobid> 
+ 
+ This will allow you to see your console output, this is especially useful for running BEAST where seeing your states/time and other parameters is useful for diagnosing runs in realtime. 
+ 
+ 
 ### Notes:
 
 ** always ensure that you are pointing to the right file location in your submission script
