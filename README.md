@@ -1,7 +1,4 @@
-Notes for working in the UPenn PMACS HPC environment. 
-LD, 2023-05
-
-
+# Notes for working in the UPenn PMACS HPC environment. 
 These are general notes for using the PMACS cluster at UPenn. 
 
 ## Logging into cluster 
