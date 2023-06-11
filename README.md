@@ -4,18 +4,18 @@ LD, 2023-05
 
 These are general notes for using the PMACS cluster at UPenn. 
 
-### Logging into cluster 
+#### Logging into cluster 
 
 
  ssh PMACSUSER@consign.pmacs.upenn.edu
 
  
-### Transferring files to cluster
+#### Transferring files to cluster
 
 rsync -av test PMACSUSER@mercury.pmacs.upenn.edu:~/directory_in_cluster
 
 
-### Interactive sessions
+#### Interactive sessions
 
 bsub -Is bash
 
@@ -30,7 +30,7 @@ Louise BEAST example of interactive session:
    7. view currently running jobs: bjobs -u username
    8. kill a job: bkill job_id
 
-### Batch submission and submission scripts
+#### Batch submission and submission scripts
 
 Place submission script and all relevant analyses files in the folder. For multiple jobs there will be multiple folders that each contain a submission file and data/analyses files. A batch subsmission script *multi_sub.sh* which is provided can be executed in the command line of the cluster to execute each of these subsmission scripts indepedently.
 
@@ -65,7 +65,7 @@ If you are not sure if a package is available , in an interactive session use th
 module spider *name_of_package**
 
 
-### Installing software
+#### Installing software
 
 
 You can request the PMACS staff to install things and they may get it up there one day and may not even install it properly if they do. If you dont want to wait you can rysnc the executables for a program into your cluster environment and save it there.
@@ -78,7 +78,7 @@ This will let you use it in a submission script by calling the location of the s
 In this case the iqtree executable can be downloaded here: http://www.iqtree.org/#download (choose the 64-bit Linux version)
 
 
-### Monitoring Jobs
+#### Monitoring Jobs
 
 When running jobs that have outputs to console, because LSF clusters dont write outfiles in realtime you need to use the *bpeek* commmand:
 
@@ -86,8 +86,28 @@ bpeek <jobid>
  
  This will allow you to see your console output, this is especially useful for running BEAST where seeing your states/time and other parameters is useful for diagnosing runs in realtime. 
  
+#### BEAST 2 and packages
+    
+ Louise interactive job steps:
  
-### Notes:
+1.  Once in an interactive job, `module load beast2`. Then do `packagemanager -help`.
+2.   To get a list of all available packages and their locations, do `packagemanager -list`
+3.   To install package (E.g. mascot) do: `packagemanager -add Mascot`. This will install the publicly available one on packagemanager.
+   
+ 
+ Installing beta package versions (Example): 
+ 
+1. To get Nicola’s latest Mascot version, downloaded that version from here: https://github.com/nicfel/Mascot/releases/download/v3.0.2/Mascot.v3.0.2.zip
+2. All packages are in this directory on pMACs: Packages user path : /home/lhmoncla/.beast/2.7
+3. To see that directory: `ls /home/lhmoncla/.beast/`To see what is in the mascot folder: `ls .beast/2.7/Mascot`
+4. To update with the new files, simply replace those files with the new ones by syncing the new files to pMACS and moving them into that folder. Just replaced all the files in `/ .beast/2.7/Mascot` with those in `Mascot.v3.0.2`.
+
+ To update BEAST 2 to latest version (as of 2023-06-11 v 2.7.4): 
+ 
+ packagemanager -update
+ 
+ 
+#### Notes:
 
 ** always ensure that you are pointing to the right file location in your submission script
 
