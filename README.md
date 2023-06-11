@@ -4,18 +4,18 @@ LD, 2023-05
 
 These are general notes for using the PMACS cluster at UPenn. 
 
-#### Logging into cluster 
+## Logging into cluster 
 
 
  ssh PMACSUSER@consign.pmacs.upenn.edu
 
  
-#### Transferring files to cluster
+## Transferring files to cluster
 
 rsync -av test PMACSUSER@mercury.pmacs.upenn.edu:~/directory_in_cluster
 
 
-#### Interactive sessions
+## Interactive sessions
 
 bsub -Is bash
 
@@ -30,7 +30,7 @@ Louise BEAST example of interactive session:
    7. view currently running jobs: bjobs -u username
    8. kill a job: bkill job_id
 
-#### Batch submission and submission scripts
+## Batch submission and submission scripts
 
 Place submission script and all relevant analyses files in the folder. For multiple jobs there will be multiple folders that each contain a submission file and data/analyses files. A batch subsmission script *multi_sub.sh* which is provided can be executed in the command line of the cluster to execute each of these subsmission scripts indepedently.
 
@@ -65,7 +65,7 @@ If you are not sure if a package is available , in an interactive session use th
 module spider *name_of_package**
 
 
-#### Installing software
+## Installing software
 
 
 You can request the PMACS staff to install things and they may get it up there one day and may not even install it properly if they do. If you dont want to wait you can rysnc the executables for a program into your cluster environment and save it there.
@@ -78,7 +78,7 @@ This will let you use it in a submission script by calling the location of the s
 In this case the iqtree executable can be downloaded here: http://www.iqtree.org/#download (choose the 64-bit Linux version)
 
 
-#### Monitoring Jobs
+## Monitoring Jobs
 
 When running jobs that have outputs to console, because LSF clusters dont write outfiles in realtime you need to use the *bpeek* commmand:
 
@@ -86,7 +86,7 @@ bpeek <jobid>
  
  This will allow you to see your console output, this is especially useful for running BEAST where seeing your states/time and other parameters is useful for diagnosing runs in realtime. 
  
-#### BEAST 2 and packages
+## BEAST 2 and packages
     
  Louise interactive job steps:
  
@@ -107,7 +107,7 @@ bpeek <jobid>
  packagemanager -update
  
  
-#### Notes:
+## Notes:
 
 ** always ensure that you are pointing to the right file location in your submission script
 
