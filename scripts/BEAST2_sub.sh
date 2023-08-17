@@ -5,7 +5,7 @@
 #BSUB -e HPAI_beast_run.err
 #BSUB -M 20240
 #BSUB -N
-#BSUB -u lamda@upenn.edu    # sends email upon job completion
+#BSUB -u myname@upenn.edu    # sends email upon job completion
 
 
 module load openjdk-1.8.0
