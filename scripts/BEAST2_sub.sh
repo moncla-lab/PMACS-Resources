@@ -8,8 +8,7 @@
 #BSUB -u myname@upenn.edu    # sends email upon job completion
 
 
-module load openjdk-1.8.0
-module load beast/2.7.4
+module load beast2
 module load beagle/4.0.0
 
 beast -beagle -beagle_SSE 526meta-domwild-mascot.xml
