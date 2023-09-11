@@ -10,5 +10,6 @@
 
 module load beast2
 module load beagle/4.0.0
+module load gcc/8.5.0 
 
 beast -beagle -beagle_SSE 526meta-domwild-mascot.xml
