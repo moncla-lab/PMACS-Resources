@@ -11,5 +11,6 @@
 module load openjdk-1.8.0
 module load beast/1.10.4
 module load beagle/4.0.0
+module load gcc/8.5.0 
 
 beast -beagle -beagle_SSE filtered_sequences_h5nx_ha.mo.clean.v2.xml
