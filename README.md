@@ -29,7 +29,7 @@ Louise BEAST example of interactive session:
 
 ## Batch submission and submission scripts
 
-Place submission script and all relevant analyses files in the folder. For multiple jobs there will be multiple folders that each contain a submission file and data/analyses files. A batch subsmission script *multi_sub.sh* which is provided can be executed in the command line of the cluster to execute each of these subsmission scripts indepedently.
+Place submission script and all relevant analyses files in the folder. For multiple jobs there will be multiple folders that each contain a submission file and data/analyses files. A batch subsmission script *multi_sub.sh* which is provided can be executed in the command line of the cluster to execute each of these subsmission scripts indepedently. Note: to use the multisub.sh script must use an interactive session see relevant section.
 
 
 To submit a single job script use following syntax in terminal:
