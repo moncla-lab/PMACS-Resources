@@ -103,7 +103,17 @@ bpeek <jobid>
  
  packagemanager -update
  
- 
+
+### Increasing heap for JAVA jobs
+
+Sometimes for jobs that are really large BEAST will throw a java.lang.OutOfMemoryError error that it has reached heap memory. To deal with this you will set the heap memory higher for java doing the following steps:
+In an interactive job (bsub -Is bash) do the following:
+1. nano ~/.bashrc and add the following line:           export JAVA_TOOL_OPTIONS="-Xmx4g"
+2. If want to set it higher change the number, in this example it is 4gigabytes
+3. source ~/.bashrc 
+
+When you run the jobs the heap should now be higher.
+
 ## Notes:
 
 ** always ensure that you are pointing to the right file location in your submission script
