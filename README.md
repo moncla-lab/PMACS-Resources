@@ -111,7 +111,7 @@ Getting list of packages ...Done!
 
 Determine packages to install
 Start installation
-java.io.FileNotFoundException: /home/maltepes/.beast/2.7/toDeleteList (No such file or directory)
+java.io.FileNotFoundException: /home/user/.beast/2.7/toDeleteList (No such file or directory)
 	at java.base/java.io.FileOutputStream.open0(Native Method)
 	at java.base/java.io.FileOutputStream.open(Unknown Source)
 	at java.base/java.io.FileOutputStream.<init>(Unknown Source)
