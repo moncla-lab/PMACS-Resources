@@ -102,7 +102,31 @@ bpeek <jobid>
  To update BEAST 2 to latest version (as of 2023-06-11 v 2.7.4): 
  
  packagemanager -update
- 
+
+If run into issues adding a beast2 package using packagemanager and receive the following error:
+
+packages user path : /home/user/.beast/2.7
+Access URL : https://raw.githubusercontent.com/CompEvol/CBAN/master/packages2.7.xml
+Getting list of packages ...Done!
+
+Determine packages to install
+Start installation
+java.io.FileNotFoundException: /home/maltepes/.beast/2.7/toDeleteList (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(Unknown Source)
+	at java.base/java.io.FileOutputStream.<init>(Unknown Source)
+	at java.base/java.io.FileWriter.<init>(Unknown Source)
+	at beast.pkgmgmt.PackageManager.uninstallPackage(Unknown Source)
+	at beast.pkgmgmt.PackageManager.uninstallPackage(Unknown Source)
+	at beast.pkgmgmt.PackageManager.prepareForInstall(Unknown Source)
+	at beast.pkgmgmt.PackageManager.main(Unknown Source)
+
+Do the following:
+Go to the your user directory and do the following:
+
+1. mkdir .beast
+2. mkdir 2.7
+3. touch toDeleteList
 
 ### Increasing heap for JAVA jobs
 
