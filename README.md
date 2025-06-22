@@ -138,6 +138,22 @@ In an interactive job (bsub -Is bash) do the following:
 
 When you run the jobs the heap should now be higher.
 
+
+## How to run a python script on HPC as a job:
+
+  1. Set up an environment  (follow instructions at this link: https://hpcwiki.pmacs.upenn.edu/wiki/index.php/HPC:Python ) 
+
+2. Source environment:
+   source $HOME/myenv/bin/activate
+
+3. Make sure packages that are used are installed for the environment (e.g pip install) 
+
+And then submit job in folder where scripts and relevant data are (Example) :
+
+bsub -e byb.e -o byb.o python enumerate_transitions_from_x.py
+
+You can also submit using a submission script, just make sure to source the environment in the script.
+
 ## Notes:
 
 ** always ensure that you are pointing to the right file location in your submission script
